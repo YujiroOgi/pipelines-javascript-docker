@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: yujiroogipipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yujiroogipipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: yujiroogipipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: yujiroogipipelinesjavascriptdocker 
+          image: yujicontainerregistry.azurecr.io/yujiroogipipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
